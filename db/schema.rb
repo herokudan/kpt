@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110522033854) do
+ActiveRecord::Schema.define(:version => 20110522072359) do
 
   create_table "boards", :force => true do |t|
     t.string   "name"
@@ -25,6 +25,15 @@ ActiveRecord::Schema.define(:version => 20110522033854) do
   end
 
   create_table "keeps", :force => true do |t|
+    t.string   "title"
+    t.text     "content"
+    t.integer  "board_id"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "problems", :force => true do |t|
     t.string   "title"
     t.text     "content"
     t.integer  "board_id"

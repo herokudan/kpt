@@ -1,4 +1,6 @@
 Kpt::Application.routes.draw do
+  resources :problems
+
   resources :keeps
 
   resources :boards

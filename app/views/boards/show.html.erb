@@ -10,6 +10,27 @@
   <%= @board.kpt_date %>
 </p>
 
+<hr/>
+<h3>Keeps</h3>
+<table>
+<% @board.keeps.each do |keep| %>
+  <tr>
+    <td><%= keep.title %></td>
+    <td><%= link_to 'Show', keep %></td>
+  </tr>
+<% end %>
+</table>
+
+<hr/>
+<h3>Problems</h3>
+<table>
+<% @board.problems.each do |problem| %>
+  <tr>
+    <td><%= problem.title %></td>
+    <td><%= link_to 'Show', problem %></td>
+  </tr>
+<% end %>
+</table>
 
 <%= link_to 'Edit', edit_board_path(@board) %> |
 <%= link_to 'Back', boards_path %>
