@@ -1,8 +1,8 @@
 Kpt::Application.routes.draw do
-  devise_for :users
+  resources :boards
 
-  resources :people
-  root :to => "people#index"
+  devise_for :users
+  root :to => "boards#index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
