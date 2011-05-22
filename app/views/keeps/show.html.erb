@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @keep.title %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%= @keep.content %>
+</p>
+
+<p>
+  <b>Board:</b>
+  <%= @keep.board.name %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @keep.user.user_name %>
+</p>
+
+
+<%= link_to 'Edit', edit_keep_path(@keep) %> |
+<%= link_to 'Back', keeps_path %>

@@ -1,4 +1,6 @@
 Kpt::Application.routes.draw do
+  resources :keeps
+
   resources :boards
 
   devise_for :users

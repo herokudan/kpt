@@ -1,0 +1,29 @@
+<h1>Listing keeps</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Content</th>
+    <th>Board</th>
+    <th>User</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @keeps.each do |keep| %>
+  <tr>
+    <td><%= keep.title %></td>
+    <td><%= keep.content %></td>
+    <td><%= keep.board.name %></td>
+    <td><%= keep.user.user_name %></td>
+    <td><%= link_to 'Show', keep %></td>
+    <td><%= link_to 'Edit', edit_keep_path(keep) %></td>
+    <td><%= link_to 'Destroy', keep, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Keep', new_keep_path %>
