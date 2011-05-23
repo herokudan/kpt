@@ -12,6 +12,7 @@
 
 <hr/>
 <h3>Keeps</h3>
+<%= link_to 'New', new_keep_path %>
 <table>
 <% @board.keeps.each do |keep| %>
   <tr>
@@ -23,6 +24,7 @@
 
 <hr/>
 <h3>Problems</h3>
+<%= link_to 'New', new_problem_path %>
 <table>
 <% @board.problems.each do |problem| %>
   <tr>

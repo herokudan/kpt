@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @try.title %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%= @try.content %>
+</p>
+
+<p>
+  <b>Board:</b>
+  <%= @try.board_id %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @try.user_id %>
+</p>
+
+<p>
+  <b>Due date:</b>
+  <%= @try.due_date %>
+</p>
+
+<p>
+  <b>Assigned user:</b>
+  <%= @try.assigned_user_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_try_path(@try) %> |
+<%= link_to 'Back', tries_path %>

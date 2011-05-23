@@ -1,0 +1,41 @@
+<%= form_for(@try) do |f| %>
+  <% if @try.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@try.errors.count, "error") %> prohibited this try from being saved:</h2>
+
+      <ul>
+      <% @try.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :content %><br />
+    <%= f.text_area :content %>
+  </div>
+  <div class="field">
+    <%= f.label :board_id %><br />
+    <%= f.text_field :board_id %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id %><br />
+    <%= f.text_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :due_date %><br />
+    <%= f.date_select :due_date %>
+  </div>
+  <div class="field">
+    <%= f.label :assigned_user_id %><br />
+    <%= f.text_field :assigned_user_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

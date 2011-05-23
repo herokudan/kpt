@@ -1,4 +1,6 @@
 Kpt::Application.routes.draw do
+  resources :tries
+
   resources :problems
 
   resources :keeps

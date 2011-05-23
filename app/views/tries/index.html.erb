@@ -1,0 +1,33 @@
+<h1>Listing tries</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Content</th>
+    <th>Board</th>
+    <th>User</th>
+    <th>Due date</th>
+    <th>Assigned user</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @tries.each do |try| %>
+  <tr>
+    <td><%= try.title %></td>
+    <td><%= try.content %></td>
+    <td><%= try.board_id %></td>
+    <td><%= try.user_id %></td>
+    <td><%= try.due_date %></td>
+    <td><%= try.assigned_user_id %></td>
+    <td><%= link_to 'Show', try %></td>
+    <td><%= link_to 'Edit', edit_try_path(try) %></td>
+    <td><%= link_to 'Destroy', try, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Try', new_try_path %>
