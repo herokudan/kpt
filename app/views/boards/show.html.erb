@@ -34,5 +34,17 @@
 <% end %>
 </table>
 
+<hr/>
+<h3>Tries</h3>
+<%= link_to 'New', new_try_path %>
+<table>
+<% @board.tries.each do |try| %>
+  <tr>
+    <td><%= try.title %></td>
+    <td><%= link_to 'Show', try %></td>
+  </tr>
+<% end %>
+</table>
+
 <%= link_to 'Edit', edit_board_path(@board) %> |
 <%= link_to 'Back', boards_path %>

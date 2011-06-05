@@ -3,7 +3,7 @@ class Board < ActiveRecord::Base
   has_and_belongs_to_many :users
   has_many :keeps
   has_many :problems
-  #has_many :trys
+  has_many :tries
 
 
   # Validations

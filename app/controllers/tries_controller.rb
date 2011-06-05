@@ -25,6 +25,7 @@ class TriesController < ApplicationController
   # GET /tries/new.xml
   def new
     @try = Try.new
+    col_select
 
     respond_to do |format|
       format.html # new.html.erb
@@ -35,6 +36,7 @@ class TriesController < ApplicationController
   # GET /tries/1/edit
   def edit
     @try = Try.find(params[:id])
+    col_select
   end
 
   # POST /tries
@@ -79,5 +81,11 @@ class TriesController < ApplicationController
       format.html { redirect_to(tries_url) }
       format.xml  { head :ok }
     end
+  end
+
+  private
+  def col_select
+    @boards = Board.all
+    @users = User.all
   end
 end
